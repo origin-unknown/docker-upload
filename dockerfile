@@ -15,7 +15,7 @@ EXPOSE 5000
 
 # Set the upload folder as a volume
 # /app/uploads
-VOLUME /app/var/app-instance
+VOLUME /app/src/instance
 
 # Define environment variable
 # ENV FLASK_APP=test.py
