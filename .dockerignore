@@ -19,7 +19,7 @@
 **/.vscode
 
 docker-compose*.yml
-dockerfile*
+Dockerfile*
 README.md
 
 words.txt
