@@ -14,7 +14,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Set the upload folder as a volume
-# /app/uploads
 VOLUME /app/src/instance
 
 # Define environment variable
