@@ -89,8 +89,10 @@ def upload():
 			# Insert each word into the SQLite database
 			db = get_db()
 			with closing(db.cursor()) as c:
-				for word in words:
-					c.execute("INSERT INTO words (word, filename, filepath) VALUES (?, ?, ?)", (word, filename, filepath))
+				c.executemany(
+					'INSERT INTO words (word, filename, filepath) VALUES (?, ?, ?)', 
+					[(word, filename, filepath,) for word in words]
+				)
 			db.commit()
 			
 			flash('File successfully uploaded and words saved to database')
